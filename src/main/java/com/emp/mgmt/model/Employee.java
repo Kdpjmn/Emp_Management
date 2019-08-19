@@ -24,7 +24,7 @@ public class Employee {
 	@Column(name="email_id")
 	private String emailId;
 	
-	//@NotNull
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name="department_id")
 	private Department department;

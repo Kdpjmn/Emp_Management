@@ -1,5 +1,6 @@
 package com.emp.mgmt.service;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,9 +22,9 @@ public class DepartmentService {
 	}
 	
 	// fetching department by id
-	public Department getDepartment(int id){
-	//	return departmentRepository.findOne(id);
-		return null;
+	public Optional<Department> getDepartment(int id){
+	  return departmentRepository.findById(id);
+		//return null;
 	}
 	
 	// inserting department

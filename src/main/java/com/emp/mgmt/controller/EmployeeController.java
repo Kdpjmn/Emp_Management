@@ -1,6 +1,7 @@
 package com.emp.mgmt.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,7 +34,7 @@ public class EmployeeController {
 
 	// displaying employee by id
 	@GetMapping("/employees/{id}")
-	public Employee getEmployee(@PathVariable int id){
+	public Optional<Employee> getEmployee(@PathVariable int id){
 		return employeeService.getEmployee(id);
 	}
 	

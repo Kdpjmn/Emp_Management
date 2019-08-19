@@ -1,6 +1,8 @@
 package com.emp.mgmt.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +23,9 @@ public class EmployeeService {
 	}
 	
 	// fetching employee by id
-	public Employee getEmployee(int id){
-		//return employeeRepository.findOne(id);
-	return null;}
+	public Optional<Employee> getEmployee(int id){
+		return employeeRepository.findById(id);
+	}
 	
 	// inserting employee
 	public void addEmployee(Employee e) {

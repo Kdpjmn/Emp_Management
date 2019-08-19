@@ -1,5 +1,6 @@
 package com.emp.mgmt.controller;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -32,7 +33,7 @@ public class DepartmentController {
 
 		// displaying department by id
 		@GetMapping("/departments/{id}")
-		public Department getDepartment(@PathVariable int id){
+		public Optional<Department> getDepartment(@PathVariable int id){
 			return departmentService.getDepartment(id);
 		}
 		
